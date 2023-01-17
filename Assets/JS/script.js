@@ -69,6 +69,8 @@ function getPrompts(){
   return true;
 }
 
+//FIX THIS 
+//FIGURE OUT HOW TO GET 'GENERATE PASSWORD' BUTTON TO WORK AGAIN W/O REFRESHING 
 
 // WHEN the password is generated
 // THEN the password is either displayed in an alert or written to the page
