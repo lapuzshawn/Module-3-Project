@@ -1,3 +1,33 @@
+//******* PSUEDO CODE IN PHASES *******// 
+
+// Phase 1 - DONE
+Add variables needed to create password, hold values in an array 
+
+// Phase 2 - DONE
+Prompt user for which arrays they would like to add to choicesArray (lowercase, uppercase, numbers and/or special char)
+
+// Phase 3 - DONE
+Add user selection from prompt to choices array to create an 'array of Character Set for code to pull random values from using index length'
+
+// Phase 4 -DONE
+Store each random character from choiceArray back into 'password' using a for loop. Then return 'password' so that the generatePassword function can store it's new value into a a variable called newPassword
+
+// Phase 5 - DONE 
+Store 'newPassword' value into 'passwordText' document.querySelector("#password") so it will display in HTML. 
+
+// Phase 6 - FIX THIS
+Link CSS so that styling will apply according to the Acceptance Criteria 
+
+// Phase 7 - PENDING 
+Debug the code IF needed. 
+
+
+
+
+
+
+
+//******* ORIGINAL READ ME BELOW *******//
 # 03 JavaScript: Password Generator
 
 ## Your Task
