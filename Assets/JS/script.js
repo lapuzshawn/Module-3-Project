@@ -6,6 +6,7 @@ var numberArray = ["1","2","3","4","5","6","7","8","9","0"];
 var specialArray = ["!","@","#","$","%","^","&","*","(",")",".","?"];
 // "Password characters" will be added to choiceArray via prompt
 var choiceArray = [ ];
+// var newPassword = "null"
 
 // Assignment code here // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
@@ -16,21 +17,33 @@ generateBtn.addEventListener("click", writePassword());
 
 // Write password to the #password input
 function writePassword() {
-  var password = generatePassword();
+  var validValues = getPrompts();
   var passwordText = document.querySelector("#password");
 
-  passwordText.value = password;
+  if(validValues) {
+    var newPassword = generatePassword();
+    //Stores newPassword value to be displayed in HTML via JS 
+    passwordText.value = newPassword;
+  } else {
+    passwordText.value = "Invalid Values";
+  }
+
 
 };
 
 // Generate PW based on PW prompts function 
 function generatePassword(){
-
+  var password = "";
+  for(var i = 0; i < charLength; i++) {
+    var randomArrayIndex = Math.floor(Math.random() * choiceArray.length);
+    password = password + choiceArray[randomArrayIndex];
+  }
+  return password;
 }
 
 function getPrompts(){
   // Reset choiceArray
-  var choiceArray = [ ];
+  choiceArray = [ ];
 
   charLength = parseInt(prompt("How long do you want your password to be? (Limited to 8 to 128 character only)"));
 
@@ -54,7 +67,7 @@ function getPrompts(){
     choiceArray = choiceArray.concat(specialArray); 
   }
   return true;
-};
+}
 
 
 
