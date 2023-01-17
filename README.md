@@ -15,7 +15,7 @@ Store each random character from choiceArray back into 'password' using a for lo
 // Phase 5 - DONE 
 Store 'newPassword' value into 'passwordText' document.querySelector("#password") so it will display in HTML. 
 
-// Phase 6 - FIX THIS
+// Phase 6 - DONE 
 Link CSS so that styling will apply according to the Acceptance Criteria 
 
 // Phase 7 - PENDING 
