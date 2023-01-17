@@ -24,11 +24,11 @@ function writePassword() {
     var newPassword = generatePassword();
     //Stores newPassword value to be displayed in HTML via JS 
     passwordText.value = newPassword;
+    
   } else {
     passwordText.value = "Invalid Values";
   }
-
-
+  return pwText;
 };
 
 // Generate PW based on PW prompts function 
@@ -69,8 +69,63 @@ function getPrompts() {
   return true;
 }
 
-//FIX THIS 
-//FIGURE OUT HOW TO GET 'GENERATE PASSWORD' BUTTON TO WORK AGAIN W/O REFRESHING 
+//FIX THIS
+//FIGURE OUT HOW TO GET 'COPY PASSWORD' BUTTON TO WORK 
+// Add copy PW button for extra credit?
+var copyBtn = document.querySelector("#copyPassword");
+copyBtn.addEventListener("click", copyThePassword);
 
-// WHEN the password is generated
-// THEN the password is either displayed in an alert or written to the page
+function copyThePassword() {
+  let copyText = document.querySelector("#password");
+  copyText.select();
+  document.execCommand("copy");
+}
+
+
+
+
+
+
+
+
+
+// TESTING COPY TO CLIPBOARD?? 
+
+ // var textarea = document.querySelector('passwordText');
+  // var textArea = document.createElement("textarea");
+  // textArea.value = passwordText;
+  // var copiedText = document.body.appendChild('textArea');
+  // var copiedText = document.querySelector("#password");
+  // var copiedText = passwordText.value;
+  // return copiedText;
+
+  // var input = document.createElement('textarea');
+  // input.innerHTML = passwordText;
+  // document.body.appendChild(input);
+  // input.select();
+  // var result = document.execCommand('copyThePassword');
+  // document.body.removeChild(input);
+  // return result;
+
+  // var input = document.createElement('input');
+  // input.value = passwordText.innerText;
+  // document.body.appendChild(input);
+  // input.select();
+  // document.execCommand('copy');
+  // document.body.removeChild(input);
+  // return result;
+
+//   var text = document.querySelector('password');
+// return text;
+
+
+// function copyThePassword(){
+//   var input = document.createElement('input');
+//   input.value = pwText.innerText;
+//   document.body.appendChild(input);
+//   input.select();
+//   document.execCommand("copy");
+
+// }
+
+    // var pwText = document.querySelector('passwordText');
